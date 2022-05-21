@@ -28,7 +28,7 @@ sudo pacman -S extra-cmake-modules qt5-base qt5-quickcontrols2 taglib kio
 ## Build
 
 ```shell
-git clone https://github.com/cirily/filemanager
+git clone https://github.com/cirily/filemanager.git
 cd filemanager
 mkdir build
 cd build
