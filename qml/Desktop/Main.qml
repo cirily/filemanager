@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2021 CutefishOS Team.
+ * Copyright (C) 2021 Piscesys Team.
  *
  * Author:     revenmartin <revenmartin@gmail.com>
  *
@@ -23,7 +23,7 @@ import QtQuick.Layouts 1.12
 import QtQuick.Window 2.12
 import QtGraphicalEffects 1.0
 
-import Cutefish.FileManager 1.0 as FM
+import Pisces.FileManager 1.0 as FM
 import FishUI 1.0 as FishUI
 import "../"
 

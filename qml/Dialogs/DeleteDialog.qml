@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2021 CutefishOS Team.
+ * Copyright (C) 2021 Piscesys Team.
  *
  * Author:     Reion Wong <reionwong@gmail.com>
  *
@@ -22,7 +22,7 @@ import QtQuick.Controls 2.12
 import QtQuick.Window 2.12
 import QtQuick.Layouts 1.12
 import FishUI 1.0 as FishUI
-import Cutefish.FileManager 1.0
+import Pisces.FileManager 1.0
 
 FishUI.Window {
     id: control

@@ -1,7 +1,7 @@
 /*
- * Copyright (C) 2021 CutefishOS Team.
+ * Copyright (C) 2021 Piscesys Team.
  *
- * Author:     Reion Wong <reion@cutefishos.com>
+ * Author:     Reion Wong <reion@piscesys.com>
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -33,9 +33,9 @@ DockDBusInterface *DockDBusInterface::self()
 
 DockDBusInterface::DockDBusInterface(QObject *parent)
     : QObject(parent)
-    , m_dockInterface("com.cutefish.Dock",
+    , m_dockInterface("com.pisces.Dock",
                     "/Dock",
-                    "com.cutefish.Dock", QDBusConnection::sessionBus())
+                    "com.pisces.Dock", QDBusConnection::sessionBus())
     , m_leftMargin(0)
     , m_rightMargin(0)
     , m_bottomMargin(0)
@@ -46,7 +46,7 @@ DockDBusInterface::DockDBusInterface(QObject *parent)
         connect(&m_dockInterface, SIGNAL(directionChanged()), this, SLOT(updateMargins()));
         connect(&m_dockInterface, SIGNAL(visibilityChanged()), this, SLOT(updateMargins()));
     } else {
-        QDBusServiceWatcher *watcher = new QDBusServiceWatcher("com.cutefish.Dock",
+        QDBusServiceWatcher *watcher = new QDBusServiceWatcher("com.pisces.Dock",
                                                                QDBusConnection::sessionBus(),
                                                                QDBusServiceWatcher::WatchForUnregistration,
                                                                this);

@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2021 CutefishOS Team.
+ * Copyright (C) 2021 Piscesys Team.
  *
  * Author:     Reion Wong <reionwong@gmail.com>
  *
@@ -81,9 +81,9 @@ bool FileLauncher::launchExecutable(const QString &fileName)
 
 bool FileLauncher::startDetached(const QString &exec, QStringList args)
 {
-    QDBusInterface iface("com.cutefish.Session",
+    QDBusInterface iface("com.pisces.Session",
                          "/Session",
-                         "com.cutefish.Session", QDBusConnection::sessionBus());
+                         "com.pisces.Session", QDBusConnection::sessionBus());
 
     if (iface.isValid()) {
         iface.asyncCall("launch", exec, args).waitForFinished();
@@ -96,9 +96,9 @@ bool FileLauncher::startDetached(const QString &exec, QStringList args)
 
 bool FileLauncher::startDetached(const QString &exec, const QString &workingDir, QStringList args)
 {
-    QDBusInterface iface("com.cutefish.Session",
+    QDBusInterface iface("com.pisces.Session",
                          "/Session",
-                         "com.cutefish.Session", QDBusConnection::sessionBus());
+                         "com.pisces.Session", QDBusConnection::sessionBus());
 
     if (iface.isValid()) {
         iface.asyncCall("launch", exec, workingDir, args).waitForFinished();

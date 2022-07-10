@@ -20,10 +20,10 @@ find_package(KF5WindowSystem)
 find_package(KF5Config)
 
 qt5_add_dbus_adaptor(DBUS_SOURCES
-                     com.cutefish.FileManager.xml
+                     com.pisces.FileManager.xml
                      application.h Application)
 
-add_executable(cutefish-filemanager
+add_executable(pisces-filemanager
   main.cpp
   application.cpp
   window.cpp
@@ -74,7 +74,7 @@ add_executable(cutefish-filemanager
   ${DBUS_SOURCES}
 )
 
-target_link_libraries(cutefish-filemanager
+target_link_libraries(pisces-filemanager
   PRIVATE
   Qt5::Core
   Qt5::DBus
@@ -93,8 +93,8 @@ target_link_libraries(cutefish-filemanager
 file(GLOB TS_FILES translations/*.ts)
 qt5_create_translation(QM_FILES ${TS_FILES})
 add_custom_target(translations DEPENDS ${QM_FILES} SOURCES ${TS_FILES})
-add_dependencies(cutefish-filemanager translations)
+add_dependencies(pisces-filemanager translations)
 
-install(TARGETS cutefish-filemanager RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR})
-install(FILES cutefish-filemanager.desktop DESTINATION "/usr/share/applications")
-install(FILES ${QM_FILES} DESTINATION /usr/share/cutefish-filemanager/translations)
+install(TARGETS pisces-filemanager RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR})
+install(FILES pisces-filemanager.desktop DESTINATION "/usr/share/applications")
+install(FILES ${QM_FILES} DESTINATION /usr/share/pisces-filemanager/translations)

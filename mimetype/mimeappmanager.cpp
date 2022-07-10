@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2021 CutefishOS Team.
+ * Copyright (C) 2021 Piscesys Team.
  *
  * Author:     Reion Wong <reionwong@gmail.com>
  *
@@ -448,7 +448,7 @@ void MimeAppManager::launchTerminal(const QString &path)
     if (m_terminalApps.isEmpty())
         return;
 
-    QSettings settings("cutefishos", "defaultApps");
+    QSettings settings("piscesys", "defaultApps");
     QString defaultTerminal = settings.value("terminal").toString();
     QString command;
 

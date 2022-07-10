@@ -325,8 +325,8 @@
     </message>
     <message>
         <location filename="../qml/FolderPage.qml" line="115"/>
-        <source>A file manager designed for CutefishOS.</source>
-        <translation>专为 CutefishOS 打造的文件管理器</translation>
+        <source>A file manager designed for Piscesys.</source>
+        <translation>专为 Piscesys 打造的文件管理器</translation>
     </message>
     <message>
         <location filename="../qml/FolderPage.qml" line="268"/>

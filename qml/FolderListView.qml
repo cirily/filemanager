@@ -20,8 +20,8 @@ import QtQuick 2.15
 import QtQuick.Controls 2.15
 import QtQuick.Layouts 1.15
 import FishUI 1.0 as FishUI
-import Cutefish.FileManager 1.0
-import Cutefish.DragDrop 1.0 as DragDrop
+import Pisces.FileManager 1.0
+import Pisces.DragDrop 1.0 as DragDrop
 
 ListView {
     id: control

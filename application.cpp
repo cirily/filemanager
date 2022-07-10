@@ -1,7 +1,7 @@
 /*
- * Copyright (C) 2021 CutefishOS Team.
+ * Copyright (C) 2021 Piscesys Team.
  *
- * Author:     Reion Wong <reion@cutefishos.com>
+ * Author:     Reion Wong <reion@piscesys.com>
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -51,8 +51,8 @@ Application::Application(int& argc, char** argv)
     : QApplication(argc, argv)
     , m_instance(false)
 {
-    if (QDBusConnection::sessionBus().registerService("com.cutefish.FileManager")) {
-        setOrganizationName("cutefishos");
+    if (QDBusConnection::sessionBus().registerService("com.pisces.FileManager")) {
+        setOrganizationName("piscesys");
         setWindowIcon(QIcon::fromTheme("file-manager"));
 
         new FileManagerAdaptor(this);
@@ -61,7 +61,7 @@ Application::Application(int& argc, char** argv)
 
         // Translations
         QLocale locale;
-        QString qmFilePath = QString("%1/%2.qm").arg("/usr/share/cutefish-filemanager/translations/").arg(locale.name());
+        QString qmFilePath = QString("%1/%2.qm").arg("/usr/share/pisces-filemanager/translations/").arg(locale.name());
         if (QFile::exists(qmFilePath)) {
             QTranslator *translator = new QTranslator(this);
             if (translator->load(qmFilePath)) {
@@ -163,9 +163,9 @@ bool Application::parseCommandLineArgs()
             openFiles(formatUriList(parser.positionalArguments()));
         }
     } else {
-        QDBusInterface iface("com.cutefish.FileManager",
+        QDBusInterface iface("com.pisces.FileManager",
                              "/FileManager",
-                             "com.cutefish.FileManager",
+                             "com.pisces.FileManager",
                              QDBusConnection::sessionBus(), this);
 
         if (parser.isSet(emptyTrashOption)) {

@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2021 CutefishOS Team.
+ * Copyright (C) 2021 Piscesys Team.
  *
  * Author:     revenmartin <revenmartin@gmail.com>
  *
@@ -43,8 +43,8 @@ int main(int argc, char *argv[])
     QCoreApplication::setAttribute(Qt::AA_EnableHighDpiScaling, true);
 
     // Register QML Type.
-    const char *uri = "Cutefish.FileManager";
-    const char *dragandrop_uri = "Cutefish.DragDrop";
+    const char *uri = "Pisces.FileManager";
+    const char *dragandrop_uri = "Pisces.DragDrop";
 
     qmlRegisterType<PlacesModel>(uri, 1, 0, "PlacesModel");
     qmlRegisterType<FolderModel>(uri, 1, 0, "FolderModel");

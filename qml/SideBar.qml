@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2021 CutefishOS Team.
+ * Copyright (C) 2021 Piscesys Team.
  *
  * Author:     revenmartin <revenmartin@gmail.com>
  *
@@ -24,7 +24,7 @@ import QtQuick.Window 2.12
 import QtGraphicalEffects 1.0
 
 import FishUI 1.0 as FishUI
-import Cutefish.FileManager 1.0
+import Pisces.FileManager 1.0
 
 ListView {
     id: sideBar
